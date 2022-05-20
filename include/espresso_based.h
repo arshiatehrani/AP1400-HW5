@@ -9,7 +9,7 @@ public:
     virtual double price() = 0;
 
     void brew();
-    std::vector<Ingredient*>& get_ingredients();
+    const std::vector<Ingredient*>& get_ingredients() const;
 
     ~EspressoBased();
 
