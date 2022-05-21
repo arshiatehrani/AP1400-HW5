@@ -2,7 +2,7 @@
 #define ESPRESSO_BASED_H
 #include "ingredient.h"
 #include <iostream>
-#include <vector>
+
 class EspressoBased {
 public:
     virtual std::string get_name() = 0;
