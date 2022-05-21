@@ -29,15 +29,20 @@ std::string Cappuccino::get_name()
     return this->name;
 }
 
-std::vector<Ingredient*>& Cappuccino::get_side_items()
-{
-    return side_items;
-}
-
 double Cappuccino ::price()
 {
     double price { static_cast<double>(Espresso(2).get_units() * Espresso(2).get_price_unit() + Milk(2).get_units() * Milk(2).get_price_unit() + MilkFoam(2).get_units() * MilkFoam(2).get_price_unit()) };
     for (const auto& ptr_side_ing : side_items)
         price += ptr_side_ing->get_units() * ptr_side_ing->get_price_unit();
     return price;
+}
+
+void Cappuccino::add_side_item(Ingredient* side)
+{
+    side_items.push_back(side);
+}
+
+std::vector<Ingredient*>& Cappuccino::get_side_items()
+{
+    return side_items;
 }
