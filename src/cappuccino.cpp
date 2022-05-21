@@ -17,10 +17,11 @@ void Cappuccino::operator=(const Cappuccino& cap)
 {
     std::cout << "Cappuccino operator=" << std::endl;
     this->name = cap.name;
-    this->units = cap.units;
-    this->price_unit = cap.price_unit;
-    for (const auto& ptr : cap.side_items)
-        this->side_items.push_back(*(new Ingredient*(ptr)));
+    for (const auto& ptr_ing : cap.ingredients)
+        this->ingredients.push_back(ptr_ing);
+
+    for (const auto& ptr_side_ing : cap.side_items)
+        this->side_items.push_back(ptr_side_ing);
 }
 
 std::string Cappuccino::get_name()
@@ -31,4 +32,12 @@ std::string Cappuccino::get_name()
 std::vector<Ingredient*>& Cappuccino::get_side_items()
 {
     return side_items;
+}
+
+double Cappuccino ::price()
+{
+    double price { static_cast<double>(Espresso(2).get_units() * Espresso(2).get_price_unit() + Milk(2).get_units() * Milk(2).get_price_unit() + MilkFoam(2).get_units() * MilkFoam(2).get_price_unit()) };
+    for (const auto& ptr_side_ing : side_items)
+        price += ptr_side_ing->get_units() * ptr_side_ing->get_price_unit();
+    return price;
 }

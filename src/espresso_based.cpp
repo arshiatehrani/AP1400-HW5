@@ -20,5 +20,5 @@ void EspressoBased ::operator=(const EspressoBased& esp)
 {
     name = esp.name;
     for (const auto& ptr_ing : esp.get_ingredients())
-        ingredients.push_back(*(new Ingredient*(ptr_ing)));
+        ingredients.push_back(ptr_ing);
 }

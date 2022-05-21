@@ -11,7 +11,7 @@ public:
     double price();
 
 protected:
-    Ingredient();
+    Ingredient() = default;
     Ingredient(double price_unit, size_t units)
         : price_unit { price_unit }
         , units { units }

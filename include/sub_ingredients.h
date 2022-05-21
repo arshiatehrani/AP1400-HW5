@@ -1,5 +1,6 @@
 #ifndef SUB_INGREDIENTS_H
 #define SUB_INGREDIENTS_H
+#include <iostream>
 
 #define DEFCLASS(sub_ingridient, price_per_unit)              \
     class sub_ingridient : public Ingredient {                \
