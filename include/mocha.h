@@ -3,10 +3,10 @@
 #include "espresso_based.h"
 #include "ingredient.h"
 #include "sub_ingredients.h"
-#include <iostream>
-class Mocha : EspressoBased {
+
+class Mocha : public EspressoBased {
 public:
-    Mocha() = default;
+    Mocha();
     Mocha(const Mocha& cap);
     ~Mocha();
     void operator=(const Mocha& cap);
@@ -20,4 +20,5 @@ public:
 private:
     std::vector<Ingredient*> side_items;
 };
+
 #endif // MOCHA_H

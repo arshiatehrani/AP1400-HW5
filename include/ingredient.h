@@ -2,6 +2,7 @@
 #define INGREDIENT_H
 #include <iostream>
 #include <vector>
+
 class Ingredient {
 public:
     double get_price_unit() { return price_unit; }

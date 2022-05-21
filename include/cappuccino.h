@@ -3,10 +3,10 @@
 #include "espresso_based.h"
 #include "ingredient.h"
 #include "sub_ingredients.h"
-#include <iostream>
-class Cappuccino : EspressoBased {
+
+class Cappuccino : public EspressoBased {
 public:
-    Cappuccino() = default;
+    Cappuccino();
     Cappuccino(const Cappuccino& cap);
     ~Cappuccino();
     void operator=(const Cappuccino& cap);
@@ -20,4 +20,5 @@ public:
 private:
     std::vector<Ingredient*> side_items;
 };
+
 #endif // CAPPUCCINO

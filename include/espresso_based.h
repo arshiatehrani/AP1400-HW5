@@ -1,7 +1,7 @@
 #ifndef ESPRESSO_BASED_H
 #define ESPRESSO_BASED_H
 #include "ingredient.h"
-#include <iostream>
+#include "sub_ingredients.h"
 
 class EspressoBased {
 public:
@@ -21,4 +21,5 @@ protected:
     std::vector<Ingredient*> ingredients;
     std::string name;
 };
+
 #endif // ESPRESSO_BASED_H

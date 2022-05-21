@@ -11,8 +11,13 @@ int main(int argc, char** argv)
     if (false) // make false to run unit-tests
     {
         // debug section
-        int a { 5 };
-        int* b = new int;
+        Cappuccino cappuccino;
+        cappuccino.add_side_item(new Water { 1 });
+        Cappuccino equal;
+        equal.add_side_item(new Sugar { 1 });
+        equal = cappuccino;
+        std::cout << "equal: " << equal.price() << "cappuccino: " << cappuccino.price() << std::endl;
+        std::cout << "equal: " << equal.get_ingredients().size() << "cappuccino: " << cappuccino.get_ingredients().size() << std::endl;
 
     } else {
         ::testing::InitGoogleTest(&argc, argv);
