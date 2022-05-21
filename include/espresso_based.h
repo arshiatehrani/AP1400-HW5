@@ -11,7 +11,7 @@ public:
     void brew();
     const std::vector<Ingredient*>& get_ingredients() const;
 
-    ~EspressoBased();
+    virtual ~EspressoBased();
 
 protected:
     EspressoBased() = default;

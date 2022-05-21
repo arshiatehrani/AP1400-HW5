@@ -19,6 +19,6 @@ const std::vector<Ingredient*>& EspressoBased ::get_ingredients() const
 void EspressoBased ::operator=(const EspressoBased& esp)
 {
     name = esp.name;
-    for (auto ptr_ing : esp.get_ingredients())
+    for (const auto& ptr_ing : esp.get_ingredients())
         ingredients.push_back(ptr_ing);
 }
