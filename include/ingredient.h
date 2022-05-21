@@ -8,7 +8,7 @@ public:
     size_t get_units() { return units; }
     virtual std::string get_name() = 0;
 
-    double price();
+    double price() { return this->units * this->price_unit; }
 
 protected:
     Ingredient() = default;
