@@ -133,7 +133,6 @@ void EspressoBased ::brew()
         }
         ing.pop();
     }
-    // std::string reset_position;
 
     auto box_bottom { ftxui::dbox({ ftxui::text("DONE!") | ftxui::bgcolor(ftxui::Color::Green) | ftxui::bold | ftxui::center | ftxui::border }) };
     auto screen_box_bottom { ftxui::Screen::Create(ftxui::Dimension::Full(), ftxui::Dimension::Fit(box_bottom)) };
