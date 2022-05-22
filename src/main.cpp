@@ -3,9 +3,10 @@
 #include "ingredient.h"
 #include "mocha.h"
 #include "sub_ingredients.h"
+#include <ftxui/dom/elements.hpp>
+#include <ftxui/screen/screen.hpp>
 #include <gtest/gtest.h>
 #include <iostream>
-
 int main(int argc, char** argv)
 {
     if (false) // make false to run unit-tests

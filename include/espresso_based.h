@@ -2,6 +2,19 @@
 #define ESPRESSO_BASED_H
 #include "ingredient.h"
 #include "sub_ingredients.h"
+#include <queue>
+#include <stack>
+#include <string>
+#include <vector>
+
+#include "ftxui/dom/node.hpp" // for Render
+#include "ftxui/screen/color.hpp" // for ftxui
+#include <chrono> // for operator""s, chrono_literals
+#include <ftxui/dom/elements.hpp> // for text, gauge, operator|, flex, hbox, Element
+#include <ftxui/screen/screen.hpp> // for Screen
+#include <iomanip>
+#include <random>
+#include <thread> // for sleep_for
 
 class EspressoBased {
 public:
