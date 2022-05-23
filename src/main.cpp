@@ -37,7 +37,7 @@ int main(int argc, char** argv)
             screen.Print();
             reset_position = screen.ResetPosition();
 
-            std::this_thread::sleep_for(0.02s);
+            std::this_thread::sleep_for(0.001s);
         }
         std::cout << std::endl;
         // std::string reset_position2;

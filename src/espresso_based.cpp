@@ -35,7 +35,7 @@ void EspressoBased ::brew()
 
         // Each Ingredient
         for (double percentage { 0.0f }; percentage <= 1.01f; percentage += 0.007f) {
-            std::string String_percent { std::to_string(int(percentage * 100)) + "/100" };
+            std::string String_percent { std::to_string(int(percentage * 100)) + "% / 100%" };
 
             if (ing.empty())
                 break;
@@ -44,91 +44,99 @@ void EspressoBased ::brew()
 
             if (ing.front() == "Cinnamon") {
 
-                auto filling { hbox({ text(ing_name + " :  \t") | color(Color::RGB(123, 63, 0)),
-                    gauge(percentage) | color(Color::RGB(123, 63, 0)),
-                    text(" " + String_percent) }) };
+                auto filling { hbox({ text(ing_name + ":\t") | color(Color::RGB(153, 80, 29)),
+                                   gauge(percentage) | color(Color::RGB(153, 80, 29)),
+                                   text(" " + String_percent) })
+                    | color(Color::RGB(255, 255, 255)) };
                 Render(screen, filling);
                 std::cout << reset_position;
                 screen.Print();
                 reset_position = screen.ResetPosition();
-                std::this_thread::sleep_for(0.05s);
+                std::this_thread::sleep_for(0.001s);
 
             } else if (ing.front() == "Chocolate") {
 
-                auto filling { hbox({ text(ing_name + " :  \t") | color(Color::RGB(92, 51, 23)),
-                    gauge(percentage) | color(Color::RGB(92, 51, 23)),
-                    text(" " + String_percent) }) };
+                auto filling { hbox({ text(ing_name + ":\t") | color(Color::RGB(124, 82, 68)),
+                                   gauge(percentage) | color(Color::RGB(124, 82, 68)),
+                                   text(" " + String_percent) })
+                    | color(Color::RGB(255, 255, 255)) };
                 Render(screen, filling);
                 std::cout << reset_position;
                 screen.Print();
                 reset_position = screen.ResetPosition();
-                std::this_thread::sleep_for(0.05s);
+                std::this_thread::sleep_for(0.001s);
 
             } else if (ing.front() == "Sugar") {
 
-                auto filling { hbox({ text(ing_name + " :  \t") | color(Color::RGB(244, 238, 232)),
-                    gauge(percentage) | color(Color::RGB(244, 238, 232)),
-                    text(" " + String_percent) }) };
+                auto filling { hbox({ text(ing_name + ":\t") | color(Color::RGB(190, 184, 174)),
+                                   gauge(percentage) | color(Color::RGB(190, 184, 174)),
+                                   text(" " + String_percent) })
+                    | color(Color::RGB(255, 255, 255)) };
                 Render(screen, filling);
                 std::cout << reset_position;
                 screen.Print();
                 reset_position = screen.ResetPosition();
-                std::this_thread::sleep_for(0.05s);
+                std::this_thread::sleep_for(0.001s);
 
             } else if (ing.front() == "Cookie") {
 
-                auto filling { hbox({ text(ing_name + " :  \t") | color(Color::RGB(157, 126, 103)),
-                    gauge(percentage) | color(Color::RGB(157, 126, 103)),
-                    text(" " + String_percent) }) };
+                auto filling { hbox({ text(ing_name + ":\t") | color(Color::RGB(197, 146, 100)),
+                                   gauge(percentage) | color(Color::RGB(197, 146, 100)),
+                                   text(" " + String_percent) })
+                    | color(Color::RGB(255, 255, 255)) };
                 Render(screen, filling);
                 std::cout << reset_position;
                 screen.Print();
                 reset_position = screen.ResetPosition();
-                std::this_thread::sleep_for(0.05s);
+                std::this_thread::sleep_for(0.001s);
 
             } else if (ing.front() == "Espresso") {
 
-                auto filling { hbox({ text(ing_name + " :  \t") | color(Color::RGB(60, 34, 24)),
-                    gauge(percentage) | color(Color::RGB(60, 34, 24)),
-                    text(" " + String_percent) }) };
+                auto filling { hbox({ text(ing_name + ":\t") | color(Color::RGB(152, 85, 30)),
+                                   gauge(percentage) | color(Color::RGB(152, 85, 30)),
+                                   text(" " + String_percent) })
+                    | color(Color::RGB(255, 255, 255)) };
                 Render(screen, filling);
                 std::cout << reset_position;
                 screen.Print();
                 reset_position = screen.ResetPosition();
-                std::this_thread::sleep_for(0.05s);
+                std::this_thread::sleep_for(0.001s);
 
             } else if (ing.front() == "Milk") {
 
-                auto filling { hbox({ text(ing_name + " :  \t") | color(Color::RGB(255, 255, 255)),
-                    gauge(percentage) | color(Color::RGB(255, 255, 255)),
-                    text(" " + String_percent) }) };
+                auto filling { hbox({ text(ing_name + ":\t") | color(Color::RGB(255, 255, 255)),
+                                   gauge(percentage) | color(Color::RGB(255, 255, 255)),
+                                   text(" " + String_percent) })
+                    | color(Color::RGB(255, 255, 255)) };
                 Render(screen, filling);
                 std::cout << reset_position;
                 screen.Print();
                 reset_position = screen.ResetPosition();
-                std::this_thread::sleep_for(0.05s);
+                std::this_thread::sleep_for(0.001s);
 
             } else if (ing.front() == "MilkFoam") {
 
-                auto filling { hbox({ text(ing_name + " :  \t") | color(Color::RGB(219, 168, 88)),
-                    gauge(percentage) | color(Color::RGB(219, 168, 88)),
-                    text(" " + String_percent) }) };
+                auto filling { hbox({ text(ing_name + ":\t") | color(Color::RGB(179, 131, 88)),
+                                   gauge(percentage) | color(Color::RGB(179, 131, 88)),
+                                   text(" " + String_percent) })
+                    | color(Color::RGB(255, 255, 255)) };
                 Render(screen, filling);
                 std::cout << reset_position;
                 screen.Print();
                 reset_position = screen.ResetPosition();
-                std::this_thread::sleep_for(0.05s);
+                std::this_thread::sleep_for(0.001s);
 
             } else if (ing.front() == "Water") {
 
-                auto filling { hbox({ text(ing_name + " :  \t") | color(Color::RGB(128, 197, 222)),
-                    gauge(percentage) | color(Color::RGB(128, 197, 222)),
-                    text(" " + String_percent) }) };
+                auto filling { hbox({ text(ing_name + ":\t") | color(Color::RGB(186, 211, 228)),
+                                   gauge(percentage) | color(Color::RGB(186, 211, 228)),
+                                   text(" " + String_percent) })
+                    | color(Color::RGB(255, 255, 255)) };
                 Render(screen, filling);
                 std::cout << reset_position;
                 screen.Print();
                 reset_position = screen.ResetPosition();
-                std::this_thread::sleep_for(0.05s);
+                std::this_thread::sleep_for(0.001s);
             }
         }
         ing.pop();
