@@ -44,7 +44,7 @@ void EspressoBased ::brew()
 
             if (ing.front() == "Cinnamon") {
 
-                auto filling { hbox({ text(ing_name + ":\t") | color(Color::RGB(153, 80, 29)),
+                auto filling { hbox({ text(ing_name + ":    ") | color(Color::RGB(153, 80, 29)),
                                    gauge(percentage) | color(Color::RGB(153, 80, 29)),
                                    text(" " + String_percent) })
                     | color(Color::RGB(255, 255, 255)) };
@@ -56,7 +56,7 @@ void EspressoBased ::brew()
 
             } else if (ing.front() == "Chocolate") {
 
-                auto filling { hbox({ text(ing_name + ":\t") | color(Color::RGB(124, 82, 68)),
+                auto filling { hbox({ text(ing_name + ":    ") | color(Color::RGB(124, 82, 68)),
                                    gauge(percentage) | color(Color::RGB(124, 82, 68)),
                                    text(" " + String_percent) })
                     | color(Color::RGB(255, 255, 255)) };
@@ -68,7 +68,7 @@ void EspressoBased ::brew()
 
             } else if (ing.front() == "Sugar") {
 
-                auto filling { hbox({ text(ing_name + ":\t") | color(Color::RGB(190, 184, 174)),
+                auto filling { hbox({ text(ing_name + ":    ") | color(Color::RGB(190, 184, 174)),
                                    gauge(percentage) | color(Color::RGB(190, 184, 174)),
                                    text(" " + String_percent) })
                     | color(Color::RGB(255, 255, 255)) };
@@ -80,7 +80,7 @@ void EspressoBased ::brew()
 
             } else if (ing.front() == "Cookie") {
 
-                auto filling { hbox({ text(ing_name + ":\t") | color(Color::RGB(197, 146, 100)),
+                auto filling { hbox({ text(ing_name + ":    ") | color(Color::RGB(197, 146, 100)),
                                    gauge(percentage) | color(Color::RGB(197, 146, 100)),
                                    text(" " + String_percent) })
                     | color(Color::RGB(255, 255, 255)) };
@@ -92,7 +92,7 @@ void EspressoBased ::brew()
 
             } else if (ing.front() == "Espresso") {
 
-                auto filling { hbox({ text(ing_name + ":\t") | color(Color::RGB(152, 85, 30)),
+                auto filling { hbox({ text(ing_name + ":    ") | color(Color::RGB(152, 85, 30)),
                                    gauge(percentage) | color(Color::RGB(152, 85, 30)),
                                    text(" " + String_percent) })
                     | color(Color::RGB(255, 255, 255)) };
@@ -104,7 +104,7 @@ void EspressoBased ::brew()
 
             } else if (ing.front() == "Milk") {
 
-                auto filling { hbox({ text(ing_name + ":\t") | color(Color::RGB(255, 255, 255)),
+                auto filling { hbox({ text(ing_name + ":    ") | color(Color::RGB(255, 255, 255)),
                                    gauge(percentage) | color(Color::RGB(255, 255, 255)),
                                    text(" " + String_percent) })
                     | color(Color::RGB(255, 255, 255)) };
@@ -116,7 +116,7 @@ void EspressoBased ::brew()
 
             } else if (ing.front() == "MilkFoam") {
 
-                auto filling { hbox({ text(ing_name + ":\t") | color(Color::RGB(179, 131, 88)),
+                auto filling { hbox({ text(ing_name + ":    ") | color(Color::RGB(179, 131, 88)),
                                    gauge(percentage) | color(Color::RGB(179, 131, 88)),
                                    text(" " + String_percent) })
                     | color(Color::RGB(255, 255, 255)) };
@@ -128,7 +128,7 @@ void EspressoBased ::brew()
 
             } else if (ing.front() == "Water") {
 
-                auto filling { hbox({ text(ing_name + ":\t") | color(Color::RGB(186, 211, 228)),
+                auto filling { hbox({ text(ing_name + ":    ") | color(Color::RGB(186, 211, 228)),
                                    gauge(percentage) | color(Color::RGB(186, 211, 228)),
                                    text(" " + String_percent) })
                     | color(Color::RGB(255, 255, 255)) };
@@ -142,7 +142,7 @@ void EspressoBased ::brew()
         ing.pop();
     }
 
-    auto box_bottom { ftxui::dbox({ ftxui::text("DONE!") | ftxui::bgcolor(ftxui::Color::Green) | ftxui::bold | ftxui::center | ftxui::border }) };
+    auto box_bottom { ftxui::dbox({ ftxui::text("DONE! Enjoy your " + this->get_name()) | ftxui::bgcolor(ftxui::Color::Green4) | ftxui::bold | ftxui::center | ftxui::border }) };
     auto screen_box_bottom { ftxui::Screen::Create(ftxui::Dimension::Full(), ftxui::Dimension::Fit(box_bottom)) };
     ftxui::Render(screen_box_bottom, box_bottom);
     screen_box_bottom.Print();
