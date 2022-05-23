@@ -34,7 +34,7 @@ void EspressoBased ::brew()
         std::string reset_position;
 
         // Each Ingredient
-        for (double percentage { 0.0f }; percentage <= 1.01f; percentage += 0.007f) {
+        for (double percentage { 0.0f }; percentage <= 1.01f; percentage += 0.01f) {
             std::string String_percent { std::to_string(int(percentage * 100)) + "% / 100%" };
 
             if (ing.empty())
@@ -42,8 +42,8 @@ void EspressoBased ::brew()
 
             auto ing_name { ing_it->get_name() };
 
+            std::string a { ing_name + " : " };
             if (ing.front() == "Cinnamon") {
-
                 auto filling { hbox({ text(ing_name + ":    ") | color(Color::RGB(153, 80, 29)),
                                    gauge(percentage) | color(Color::RGB(153, 80, 29)),
                                    text(" " + String_percent) })
@@ -52,7 +52,7 @@ void EspressoBased ::brew()
                 std::cout << reset_position;
                 screen.Print();
                 reset_position = screen.ResetPosition();
-                std::this_thread::sleep_for(0.001s);
+                std::this_thread::sleep_for(0.01s);
 
             } else if (ing.front() == "Chocolate") {
 
@@ -64,7 +64,7 @@ void EspressoBased ::brew()
                 std::cout << reset_position;
                 screen.Print();
                 reset_position = screen.ResetPosition();
-                std::this_thread::sleep_for(0.001s);
+                std::this_thread::sleep_for(0.01s);
 
             } else if (ing.front() == "Sugar") {
 
@@ -76,7 +76,7 @@ void EspressoBased ::brew()
                 std::cout << reset_position;
                 screen.Print();
                 reset_position = screen.ResetPosition();
-                std::this_thread::sleep_for(0.001s);
+                std::this_thread::sleep_for(0.01s);
 
             } else if (ing.front() == "Cookie") {
 
@@ -88,7 +88,7 @@ void EspressoBased ::brew()
                 std::cout << reset_position;
                 screen.Print();
                 reset_position = screen.ResetPosition();
-                std::this_thread::sleep_for(0.001s);
+                std::this_thread::sleep_for(0.01s);
 
             } else if (ing.front() == "Espresso") {
 
@@ -100,7 +100,7 @@ void EspressoBased ::brew()
                 std::cout << reset_position;
                 screen.Print();
                 reset_position = screen.ResetPosition();
-                std::this_thread::sleep_for(0.001s);
+                std::this_thread::sleep_for(0.01s);
 
             } else if (ing.front() == "Milk") {
 
@@ -112,7 +112,7 @@ void EspressoBased ::brew()
                 std::cout << reset_position;
                 screen.Print();
                 reset_position = screen.ResetPosition();
-                std::this_thread::sleep_for(0.001s);
+                std::this_thread::sleep_for(0.01s);
 
             } else if (ing.front() == "MilkFoam") {
 
@@ -124,7 +124,7 @@ void EspressoBased ::brew()
                 std::cout << reset_position;
                 screen.Print();
                 reset_position = screen.ResetPosition();
-                std::this_thread::sleep_for(0.001s);
+                std::this_thread::sleep_for(0.01s);
 
             } else if (ing.front() == "Water") {
 
@@ -136,7 +136,7 @@ void EspressoBased ::brew()
                 std::cout << reset_position;
                 screen.Print();
                 reset_position = screen.ResetPosition();
-                std::this_thread::sleep_for(0.001s);
+                std::this_thread::sleep_for(0.01s);
             }
         }
         ing.pop();
